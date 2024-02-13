@@ -1,13 +1,13 @@
 // Setup
 const http = require("http");
 const config = require("./config");
-const {initFiles} = require("./libs/db");
+const initDatabases = require("./libs/db");
 const logger = require("./libs/logger");
 const express = require("./libs/express");
 
 // Create Folders
 logger.debug("Initiating Program...");
-initFiles(_ => {
+initDatabases(_ => {
     logger.debug("Initiated!");
 });
 
