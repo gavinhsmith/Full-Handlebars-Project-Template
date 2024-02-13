@@ -3,7 +3,7 @@ const fs = require("fs");
 const path = require("path");
 
 // Database inital structures
-const DATABASE_STRUCTS = require("../db_structs.json");
+const DATABASE_STRUCTS = require("../config").db_structs;
 const DATABASE_NAMES = Object.keys(DATABASE_STRUCTS);
 
 // db/ folder
@@ -44,15 +44,15 @@ function makeAllDBs() {
 }
 
 // Init Function
-function initFiles(callback) {
+function initDatabases(callback) {
     makeDBFolder();
     makeAllDBs();
     callback();
 }
 
 // Exports
-exports.initFiles = initFiles;
-exports.initFiles.DBFolderExist = DBFolderExist;
-exports.initFiles.makeDBFolder = makeDBFolder;
-exports.initFiles.getMissingDBs = getMissingDBs;
-exports.initFiles.makeAllDBs = makeAllDBs;
+module.exports = initDatabases;
+module.exports.DBFolderExist = DBFolderExist;
+module.exports.makeDBFolder = makeDBFolder;
+module.exports.getMissingDBs = getMissingDBs;
+module.exports.makeAllDBs = makeAllDBs;

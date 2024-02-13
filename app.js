@@ -1,7 +1,7 @@
 // Setup
 const http = require("http");
 const config = require("./config");
-const {initFiles} = require("./libs/init");
+const {initFiles} = require("./libs/db");
 const logger = require("./libs/logger");
 const express = require("./libs/express");
 
