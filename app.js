@@ -16,5 +16,5 @@ const server = http.createServer(express);
 
 // Launch
 server.listen(config.port, _ => {
-    logger.info("Started!");
+    logger.info(`Started at *:${config.port}!`);
 })
