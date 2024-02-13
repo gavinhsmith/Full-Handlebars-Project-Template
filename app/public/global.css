@@ -1,5 +1,35 @@
 * {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
+}
+
+.full {
+    height: 100vh;
+}
+
+.center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.popout {
+    padding: 3em;
+    border-radius: 1em;
+    box-shadow: 0 0 1em #cdebff;
+    background-color: #cdebff;
+}
+
+h1 {
+    font-weight: normal;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.sandpaper {
+    background-image: url(https://i.pinimg.com/originals/b3/d0/0d/b3d00d0d6b8e3727719ea11e67a065c5.gif);
 }
