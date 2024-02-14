@@ -1,9 +1,16 @@
 // Setup
 const path = require("path");
 const express = require("express");
+const bodyParser = require('body-parser');
 const {engine} = require('express-handlebars');
+
+// Router
 const logger = require("./logger");
 const app = express();
+
+// Form Parser
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 // Handlebars Engine
 app.engine('hbs', engine({
